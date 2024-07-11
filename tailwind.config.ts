@@ -8,13 +8,33 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        'light_evergreen': '#C7E2DB',
+        'evergreen': '#016145',
+        'dark_evergreen': '#023F2F',
+        'dark_gray': '#24201F',
+        'offwhite': '#EFECE7'
       },
+
+      animation: {
+        flip: 'flip 1s forwards'
+      },
+
+      keyframes: {
+        flip: {
+          '0%' : { transform: 'rotate3d(-1, 1, 0, 0deg)'},
+          '100%' : { transform: 'rotate3d(-1, 1, 0, 180deg)'}
+        }
+      },
+
+      screens: {
+        'normal-phones': '400px'
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-3d'),
+    require("tailwindcss-animation-delay")
+  ],
 };
 export default config;
