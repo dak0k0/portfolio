@@ -17,8 +17,10 @@ for path in dir_list:
         f.write("\"path\": \"/homepage/resized/")
         f.write(path)
         f.write("\"")
+        f.write(", delay: 0")
         f.write("}")
         f.write(", ")
+
         f.write("\n")
 
 f.close()
