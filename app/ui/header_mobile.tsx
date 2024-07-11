@@ -2,14 +2,13 @@
 
 import React, { ReactNode, useEffect, useRef, useState} from 'react'
 
-import Link from "next/Link";
+import Link from 'next/link'
 import { usePathname } from 'next/navigation';
 
 import { SIDENAV_ITEMS } from '@/styles/constants';
 import { SideNavItem } from '@/styles/types';
 import { Icon } from "@iconify/react";
 import { motion, useCycle } from "framer-motion";
-import { MenuItem } from '@mui/material';
 
 const sidebar = {
     open: (height = 1000) => ({

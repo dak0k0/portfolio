@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
-import { useMediaQuery } from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery'
 
 export default function Header() {
     const pathname = usePathname()
